@@ -56,3 +56,44 @@ function combineNameAndTitle() {
 console.log(combineNameAndTitle());
 
 console.log("------------------------\n");
+
+let numArray = [];
+for(var i = 0; i < 100; i++) {
+  numArray.push(Math.random());
+}
+
+function halfAndAbove() {
+  return numArray.filter(function(num) {
+    return num >= 0.5;
+  });
+};
+
+console.log(halfAndAbove());
+
+console.log("------------------------\n");
+
+function belowHalf() {
+  return numArray.filter(function(num) {
+    return num < 0.5;
+  });
+};
+
+console.log(belowHalf());
+
+console.log("------------------------\n");
+
+function sumArray(array) {
+  return array.reduce(function(sum, number) {
+    return sum + number;
+  });
+};
+
+console.log(sumArray(numArray));
+
+console.log("------------------------\n");
+
+function averageOfArray(array) {
+  return sumArray(array) / array.length;
+};
+
+console.log(averageOfArray(numArray));
